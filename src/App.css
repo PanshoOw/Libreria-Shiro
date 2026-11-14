@@ -392,6 +392,79 @@ main {
 }
 
 /* ========================================
+   11. CATEGORÍAS DE LIBROS
+======================================== */
+
+.categorias-cuadricula {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 32px;
+}
+
+.categoria-tarjeta {
+  padding: 30px 24px;
+  border: 1px solid #E2D5C3;
+  border-radius: 12px;
+  background-color: #F7F3EC;
+  text-align: center;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.categoria-tarjeta:hover {
+  border-color: #C49A60;
+  box-shadow: 0 8px 20px rgb(56 45 38 / 8%);
+}
+
+.categoria-tarjeta__decoracion {
+  display: block;
+  margin-bottom: 20px;
+  color: #C49A60;
+  font-size: 28px;
+}
+
+.categoria-tarjeta h3 {
+  margin: 0 0 12px;
+  color: #355748;
+  font-size: 22px;
+}
+
+.categoria-tarjeta p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.categorias-error {
+  margin-top: 24px;
+  padding: 20px;
+  border: 1px solid #783F46;
+  border-radius: 10px;
+  background-color: #FFF2F0;
+}
+
+.categorias-error p {
+  color: #783F46;
+}
+
+@media (max-width: 800px) {
+  .categorias-cuadricula {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .categorias-cuadricula {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .categoria-tarjeta {
+    transition: none;
+  }
+}
+
+/* ========================================
    12. RECUPERACIÓN ANTE ERRORES
 ======================================== */
 
