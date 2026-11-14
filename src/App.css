@@ -1,0 +1,467 @@
+/* ========================================
+   1. ESTRUCTURA GENERAL
+======================================== */
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ========================================
+   2. ENCABEZADO
+======================================== */
+
+.encabezado {
+  background-color: #FFFDF8;
+  border-bottom: 1px solid #E2D5C3;
+}
+
+.encabezado__interior {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+/* ========================================
+   3. IDENTIDAD DE MARCA
+======================================== */
+
+.marca {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-decoration: none;
+}
+
+.marca__simbolo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+  border: 2px solid #C49A60;
+  border-radius: 50%;
+  background-color: #355748;
+  color: #FFFDF8;
+  font-size: 19px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.marca__contenido {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.marca__nombre {
+  color: #382D26;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.marca__lema {
+  color: #806D5C;
+  font-size: 13px;
+  font-style: italic;
+}
+
+/* ========================================
+   4. NAVEGACIÓN
+======================================== */
+
+.encabezado nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.encabezado nav a {
+  padding: 11px 18px;
+  border-radius: 7px;
+  color: #382D26;
+  font-size: 15px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.encabezado nav a:hover {
+  background-color: #EFE7DA;
+}
+
+.encabezado nav a.active {
+  background-color: #355748;
+  color: #FFFFFF;
+}
+
+/* ========================================
+   5. CONTENIDO PRINCIPAL
+======================================== */
+
+main {
+  flex: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 56px 24px;
+}
+
+.pagina {
+  padding: 40px;
+  border: 1px solid #E2D5C3;
+  border-radius: 18px;
+  background-color: #FFFDF8;
+  box-shadow: 0 12px 30px rgb(56 45 38 / 5%);
+}
+
+.pagina h2 {
+  margin-top: 0;
+  color: #382D26;
+  font-size: 32px;
+}
+
+.pagina p {
+  color: #635448;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* ========================================
+   6. PORTADA
+======================================== */
+
+.portada {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  align-items: center;
+  gap: 42px;
+  min-height: 500px;
+  overflow: hidden;
+  background: linear-gradient(
+    135deg,
+    #FFFDF8 0%,
+    #F4EBDD 100%
+  );
+}
+
+.portada__contenido {
+  position: relative;
+  z-index: 1;
+}
+
+.portada__etiqueta {
+  display: inline-block;
+  margin-bottom: 22px;
+  color: #783F46;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.portada h2 {
+  max-width: 650px;
+  margin-bottom: 25px;
+  font-size: clamp(38px, 4.5vw, 64px);
+  line-height: 1.15;
+  letter-spacing: -1px;
+}
+
+.portada h2 em {
+  display: block;
+  color: #355748;
+  font-weight: normal;
+}
+
+.portada p {
+  max-width: 510px;
+  margin-bottom: 16px;
+  font-size: 17px;
+}
+
+/* ========================================
+   7. BOTONES
+======================================== */
+
+.boton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 25px;
+  padding: 15px 25px;
+  border: 1px solid #355748;
+  border-radius: 7px;
+  background-color: #355748;
+  color: #FFFFFF;
+  font-size: 15px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.boton:hover {
+  background-color: #253F34;
+  transform: translateY(-2px);
+}
+
+/* ========================================
+   8. ILUSTRACIÓN DE LIBROS
+======================================== */
+
+.biblioteca-visual {
+  position: relative;
+  width: 100%;
+  height: 360px;
+  min-width: 0;
+}
+
+.biblioteca-visual__arco {
+  position: absolute;
+  inset: 0 8% 22px;
+  border: 2px solid #DAC8AE;
+  border-radius: 48% 48% 12px 12px;
+  background: radial-gradient(
+    circle at 50% 35%,
+    #EAD8BD 0%,
+    #D7BFA0 100%
+  );
+}
+
+.biblioteca-visual__estante {
+  position: absolute;
+  right: 12%;
+  bottom: 58px;
+  left: 12%;
+  display: flex;
+  align-items: flex-end;
+  gap: 7px;
+  height: 225px;
+  padding: 0 14px;
+}
+
+/* Lomos de los libros */
+
+.lomo {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  border: 1px solid rgb(56 45 38 / 30%);
+  border-radius: 4px 6px 2px 2px;
+  box-shadow: inset -5px 0 8px rgb(0 0 0 / 14%);
+}
+
+/* Decoraciones doradas */
+
+.lomo::before {
+  position: absolute;
+  top: 15%;
+  right: 16%;
+  left: 16%;
+  height: 2px;
+  background-color: #E8C99A;
+  box-shadow: 0 14px 0 #E8C99A;
+  content: '';
+}
+
+.lomo--uno {
+  height: 75%;
+  background-color: #355748;
+}
+
+.lomo--dos {
+  height: 90%;
+  background-color: #783F46;
+}
+
+.lomo--tres {
+  height: 82%;
+  background-color: #9A7048;
+}
+
+.lomo--cuatro {
+  height: 100%;
+  background-color: #453B58;
+}
+
+.lomo--cinco {
+  height: 88%;
+  background-color: #557065;
+}
+
+.lomo--seis {
+  height: 95%;
+  background-color: #9D5948;
+}
+
+.lomo--siete {
+  height: 78%;
+  background-color: #B08B55;
+}
+
+/* Repisa de madera */
+
+.biblioteca-visual__base {
+  position: absolute;
+  right: 7%;
+  bottom: 45px;
+  left: 7%;
+  height: 15px;
+  border-radius: 3px;
+  background-color: #79543A;
+  box-shadow: 0 8px 0 #553B2B;
+}
+
+/* ========================================
+   9. PIE DE PÁGINA
+======================================== */
+
+.pie-pagina {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 30px 20px;
+  background-color: #355748;
+  color: #FFFDF8;
+  text-align: center;
+}
+
+.pie-pagina p {
+  margin: 0;
+  font-size: 19px;
+  font-weight: bold;
+}
+
+.pie-pagina span {
+  color: #E7DDC8;
+  font-size: 14px;
+  font-style: italic;
+}
+
+.pie-pagina small {
+  margin-top: 8px;
+  color: #C9D6CF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+}
+
+/* ========================================
+   10. DISEÑO RESPONSIVE
+======================================== */
+
+@media (max-width: 800px) {
+  .encabezado__interior {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .marca {
+    justify-content: center;
+  }
+
+  .encabezado nav {
+    justify-content: center;
+  }
+
+  .portada {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .biblioteca-visual {
+    max-width: 400px;
+    height: 300px;
+    margin: 0 auto;
+  }
+}
+
+.mensaje-carga {
+  display: block;
+  margin-top: 24px;
+  color: #355748;
+  font-size: 16px;
+  font-style: italic;
+}
+
+/* ========================================
+   12. RECUPERACIÓN ANTE ERRORES
+======================================== */
+
+.categorias-error__acciones {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.categorias-error__acciones .boton {
+  margin-top: 0;
+}
+
+.boton--secundario {
+  border: 1px solid #355748;
+  background-color: transparent;
+  color: #355748;
+}
+
+.boton--secundario:hover {
+  background-color: #E7DDC8;
+}
+
+@media (max-width: 480px) {
+  .encabezado__interior {
+    padding: 20px 12px;
+  }
+
+  .marca__nombre {
+    font-size: 21px;
+  }
+
+  main {
+    padding: 24px 12px;
+  }
+
+  .pagina {
+    padding: 24px;
+  }
+
+  .portada h2 {
+    font-size: 38px;
+  }
+
+  .portada p {
+    font-size: 15px;
+  }
+
+  .biblioteca-visual {
+    height: 260px;
+  }
+
+  .biblioteca-visual__estante {
+    gap: 5px;
+    height: 170px;
+  }
+
+  .boton {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .boton {
+    transition: none;
+  }
+
+  .boton:hover {
+    transform: none;
+  }
+}
